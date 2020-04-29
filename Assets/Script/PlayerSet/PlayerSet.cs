@@ -7,7 +7,6 @@ public class PlayerSet : MonoBehaviour
 {
 	public DBBracket thatDBbracket;
 	public int numPlayer = 0;
-	private bool nameSet=false;
 	public InputField[] inputBox;
     // Start is called before the first frame update
     void Start()
@@ -23,19 +22,16 @@ public class PlayerSet : MonoBehaviour
 	
 	public void Player1v1(){
 		numPlayer = 2;
-		nameSet = true;
 		SetNametoDB();
 	}
 	
 	public void Playeris3(){
 		numPlayer = 3;
-		nameSet = true;
 		SetNametoDB();
 	}
 	
 	public void Playeris4(){
 		numPlayer = 4;
-		nameSet = true;
 		SetNametoDB();
 	}
 	

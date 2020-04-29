@@ -9,8 +9,8 @@ public class BracketSystem : MonoBehaviour
 	public DBBracket thisBracket;
 	public string[] playernameSet;
     public int playerSet;
-	[SerializeField] private GameObject[] bracketPlayer;
-	[SerializeField] private Text[] textName;
+	[SerializeField] private GameObject[] bracketPlayer = new GameObject[7];
+	[SerializeField] private Text[] textName = new Text[7];
 	public bool wL,wR,wF;
 	//anjay
 	
