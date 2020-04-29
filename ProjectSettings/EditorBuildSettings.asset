@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: f81e9b216bc10fc44811103351584f38
+  - enabled: 1
+    path: Assets/Scenes/Bracket.unity
+    guid: 61435fd8eaaadc44088f9c37c3577053
+  - enabled: 1
+    path: Assets/Scenes/GamePlayPalsu.unity
+    guid: 326d600bf4a6af1479c017261520a29b
+  - enabled: 1
+    path: Assets/Scenes/PlayerSet.unity
+    guid: 390723a949daa484fbdf8168bf55b019
   m_configObjects: {}
