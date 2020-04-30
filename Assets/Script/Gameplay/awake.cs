@@ -6,12 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class awake : MonoBehaviour
 {
-	public Text thatText;
 	public DBBracket thatBracket;
     // Start is called before the first frame update
     void Start()
     {
-        thatText.text = thatBracket.player1Active + " VS " + thatBracket.player2Active;
     }
 
     // Update is called once per frame
@@ -33,7 +31,7 @@ public class awake : MonoBehaviour
 			thatBracket.nameOfPlayer[0] = thatBracket.player1Active;
 		}
 		thatBracket.numOfPlayer -= 1;
-		SceneManager.LoadScene("Bracket");
+		//SceneManager.LoadScene("Bracket");
 	}
 	
 	public void Player2Win(){
@@ -49,6 +47,6 @@ public class awake : MonoBehaviour
 			thatBracket.nameOfPlayer[0] = thatBracket.player2Active;
 		}
 		thatBracket.numOfPlayer -= 1;
-		SceneManager.LoadScene("Bracket");
+		//SceneManager.LoadScene("Bracket");
 	}
 }
