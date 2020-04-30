@@ -11,6 +11,7 @@ public class ButtonJurus : MonoBehaviour
 	public bool skill3= false;
 	public GameObject wall1,wall2;
 	public GameObject shootPoint,shootPoint2,skill1b,skill1b2;
+	private Gameplaymanager manager;
 	
 	public GameObject character1,cCollider1,character2,cCollider2;
 	RectTransform rt1,rt2;
@@ -20,6 +21,7 @@ public class ButtonJurus : MonoBehaviour
 	public GameObject bull,bull2;
   
 	void Start(){
+		manager = GameObject.Find("EventSystem").GetComponent<Gameplaymanager>();
 		rt1 = character1.GetComponent<RectTransform>();
 		rt2 = character2.GetComponent<RectTransform>();
 		wall1.SetActive(false);
@@ -28,15 +30,19 @@ public class ButtonJurus : MonoBehaviour
 	
 	public void Seleksi(){
 		if(bullet){
+			manager.sound.PlayOneShot(manager.spawnsound);
 			Bullet();
 		}
 		if(skill1){
+			manager.sound.PlayOneShot(manager.spawnsound);
 			SKILL1();
 		}
 		if(skill2){
+			manager.sound.PlayOneShot(manager.spawnsound);
 			SKILL2();
 		}
 		if(skill3){
+			manager.sound.PlayOneShot(manager.spawnsound);
 			SKILL3();
 		}
 		

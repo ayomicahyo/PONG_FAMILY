@@ -9,7 +9,12 @@ public class ChangeScene : MonoBehaviour
 	public string namaScene;
     // Start is called before the first frame update
     public void ChangeScenebyName(){
-		SceneManager.LoadScene(namaScene);
+		StartCoroutine(Wait(2f));
 	}
 	
+	
+	IEnumerator Wait(float time){
+		yield return new WaitForSeconds(time);
+		SceneManager.LoadScene(namaScene);
+	}
 }

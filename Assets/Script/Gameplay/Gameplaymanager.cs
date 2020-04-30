@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Gameplaymanager : MonoBehaviour
 {
+	public AudioSource sound;
+	public AudioClip spawnsound;
+	public AudioClip hitSound;
+	public AudioClip goalSound;
+	public AudioClip winSound;
+	public AudioClip readyFight;
 	public bool gameIsplay;
     public bool doSpawn = true;
 	public int ballInArena=0;
@@ -30,6 +36,7 @@ public class Gameplaymanager : MonoBehaviour
 	}
 	
 	public void Kocok(){
+		sound.PlayOneShot(spawnsound);
 		Debug.Log(i.ToString());
 		if(i==1){
 			aturspawner1.Spawning();

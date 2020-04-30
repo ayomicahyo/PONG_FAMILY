@@ -10,9 +10,11 @@ public class Skill1 : MonoBehaviour
 	Rigidbody2D rb;
 	public GameObject player1,player2;
 	public Sprite bullet;
+	private Gameplaymanager manager;
     // Start is called before the first frame update
     void Start()
     {
+		manager = GameObject.Find("EventSystem").GetComponent<Gameplaymanager>();
 		player1 = GameObject.Find("C p1 tempat jari");
 		player2 = GameObject.Find("C p2 tempat jari");
 		if(!isplayer1){
@@ -25,9 +27,11 @@ public class Skill1 : MonoBehaviour
     void OnTriggerEnter2D(Collider2D coll){
 		
 		if(coll.gameObject.name == "Collider2"){
+			manager.sound.PlayOneShot(manager.hitSound);
 			player2.SetActive(false);
 		}
 		if(coll.gameObject.name == "Collider1"){
+			manager.sound.PlayOneShot(manager.hitSound);
 			player1.SetActive(false);
 		}
 		if(coll.gameObject.name == "BAtAS ATAS" || coll.gameObject.name == "BAtAS BAWAH" ){
