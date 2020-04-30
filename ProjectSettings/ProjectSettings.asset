@@ -605,10 +605,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: da4801bb-09ba-422c-b02e-e85e9c058e20
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: PONG FAMILY
+  organizationId: oxigameind
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
