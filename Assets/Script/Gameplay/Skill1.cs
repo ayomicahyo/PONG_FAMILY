@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Skill1 : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Skill1 : MonoBehaviour
     public float speed = 4f;
 	Rigidbody2D rb;
 	public GameObject player1,player2;
+	public Sprite bullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,17 +26,20 @@ public class Skill1 : MonoBehaviour
 		
 		if(coll.gameObject.name == "Collider2"){
 			player2.SetActive(false);
-			StartCoroutine(Wait(1f));
 		}
 		if(coll.gameObject.name == "Collider1"){
 			player1.SetActive(false);
-			StartCoroutine(Wait(1f));
+		}
+		if(coll.gameObject.name == "BAtAS ATAS" || coll.gameObject.name == "BAtAS BAWAH" ){
+			Destroy(gameObject);
+			player2.SetActive(true);
+			player1.SetActive(true);
+			if(!isplayer1){
+				GameObject.Find("jurusA").GetComponent<Image>().sprite = bullet;
+			}else{
+				GameObject.Find("jurusB").GetComponent<Image>().sprite = bullet;
+			}
 		}
 	}
 	
-	IEnumerator Wait(float time){
-		yield return new WaitForSeconds(time);
-		player2.SetActive(true);
-		player1.SetActive(true);
-	}
 }
