@@ -75,12 +75,12 @@ public class ButtonJurus : MonoBehaviour
 	}
 	void SKILL3(){
 		if (isPlayer1){
-			rt1.sizeDelta = new Vector2(300f,200f);
-			cCollider1.transform.localScale = new Vector2(1500f,300f);
+			rt1.sizeDelta = new Vector2(400f,400f);
+			cCollider1.transform.localScale = new Vector2(1800f,300f);
 			StartCoroutine(Wait(3f));
 		}else{
-			rt2.sizeDelta = new Vector2(300f,200f);
-			cCollider2.transform.localScale = new Vector2(1500f,300f);
+			rt2.sizeDelta = new Vector2(400f,400f);
+			cCollider2.transform.localScale = new Vector2(1800f,300f);
 			StartCoroutine(Wait(3f));
 		}
 		bullet = true;
@@ -93,9 +93,9 @@ public class ButtonJurus : MonoBehaviour
 		yield return new WaitForSeconds(time);
 		wall1.SetActive(false);
 		wall2.SetActive(false);
-		rt1.sizeDelta = new Vector2(121.5f,128.2f);
+		rt1.sizeDelta = new Vector2(188.4f,188.4f);
 		cCollider1.transform.localScale = new Vector2(833.47f,300f);
-		rt2.sizeDelta = new Vector2(121.5f,128.2f);
+		rt2.sizeDelta = new Vector2(188.4f,188.4f);
 		cCollider2.transform.localScale = new Vector2(833.47f,300f);
 	}
 }
