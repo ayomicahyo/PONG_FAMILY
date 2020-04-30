@@ -16,6 +16,7 @@ public class CollScore : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D coll){
 		
 		if(coll.gameObject.name =="BALL(Clone)"|| coll.gameObject.name =="BALL 1(Clone)"){
+			manager.sound.PlayOneShot(manager.goalSound);
 			Destroy(coll.gameObject);
 			if(isPlayer1){
 				manager.scoreP1 += 1;
@@ -27,6 +28,7 @@ public class CollScore : MonoBehaviour
 			}
 			manager.ballInArena -= 1;
 		}else if(coll.gameObject.name =="BALL 2(Clone)"|| coll.gameObject.name =="BALL 3(Clone)" ){
+			manager.sound.PlayOneShot(manager.goalSound);
 			Destroy(coll.gameObject);
 			if(isPlayer1){
 				manager.scoreP1 += 1;

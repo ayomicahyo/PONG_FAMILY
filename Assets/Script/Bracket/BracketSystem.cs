@@ -6,15 +6,24 @@ using UnityEngine.UI;
 
 public class BracketSystem : MonoBehaviour
 {
+	public AudioSource sound;
+	public AudioClip winner;
+	public GameObject buttonDone;
+	public GameObject buttonFight;
+	public GameObject dOne;
+	public bool isDONE;
 	public DBBracket thisBracket;
 	public string[] playernameSet;
     public int playerSet;
 	[SerializeField] private GameObject[] bracketPlayer = new GameObject[7];
 	[SerializeField] private Text[] textName = new Text[7];
 	public bool wL,wR,wF;
+	public GameObject fight,theWinner;
+	public Text nameWinner;
 	//anjay
 	
 	void Awake(){
+		isDONE = false;
 		wL=false;
 		wR=false;
 		wF=false;
@@ -56,6 +65,18 @@ public class BracketSystem : MonoBehaviour
 		}
 		thisBracket.winL = wL;
 		thisBracket.winR = wR;
+		if(playerSet == 1){
+			sound.PlayOneShot(winner);
+			buttonFight.SetActive(false);
+			buttonDone.SetActive(true);
+			isDONE = true;
+			fight.SetActive(false);
+			theWinner.SetActive(true);
+			nameWinner.text = thisBracket.nameOfPlayer[0];
+		}
+		if(isDONE){
+			dOne.SetActive(true);
+		}
 	}
 	
 	public void TurnDecrease(){

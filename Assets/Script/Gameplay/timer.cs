@@ -40,6 +40,7 @@ public class timer : MonoBehaviour
 			}
 			if( time <= 0 ){
 				Debug.Log("gameSelesai");
+				manager.sound.PlayOneShot(manager.winSound);
 				manager.gameIsplay = false;
 				done.SetActive(true);
 				if(manager.scoreP1 > manager.scoreP2){
