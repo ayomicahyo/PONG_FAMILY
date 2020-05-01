@@ -38,14 +38,14 @@ public class Controller : MonoBehaviour
 			
 			switch(touch2.phase){
 				case TouchPhase.Began:
-					if(GetComponent<Collider2D>() == Physics2D.OverlapPoint(touchPos1)){
+					if(GetComponent<Collider2D>() == Physics2D.OverlapPoint(touchPos2)){
 						deltaX = touchPos2.x - transform.position.x;
 						deltaY = touchPos2.y - transform.position.y;
 					}
 					break;
 				
 				case TouchPhase.Moved:
-					if(GetComponent<Collider2D>() == Physics2D.OverlapPoint(touchPos1)){
+					if(GetComponent<Collider2D>() == Physics2D.OverlapPoint(touchPos2)){
 						transform.position = new Vector2(touchPos2.x - deltaX , transform.position.y);
 					}
 					break;
